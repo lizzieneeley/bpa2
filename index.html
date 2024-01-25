@@ -8,20 +8,10 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div id="loading">
-        <div id="loading-center">
-            <div id="loading-center-absolute">
-                <div class="object" id="object_one"></div>
-                <div class="object" id="object_two"></div>
-                <div class="object" id="object_big"></div>
-            </div>
-        </div>
-    </div>
-
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-md navbar-light bg-transparent">
-            <a class="navbar-brand text-white" href="#"><img class="logo" src="#"> </a>
-            <button class="navbar-toggler order-2" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+            <a class="navbar-brand text-white" href="#">Logo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -36,51 +26,30 @@
             </div>
         </nav>
     </header>
-
     <section class="banner">
-        <div class="row justify-content-center align-items-center h-100">
-            <div class="col-lg-6 text-center">
+        <div class="row justify-content-start align-items-center h-100">
+            <div class="col-lg-6">
                 <div class="banner-text">
-                    <h1 class="mb-4 game">GAME DAY GRILL</h1>
-                    <p class="destination">Your Ultimate Game Day Destination.</p>
+                    Game Day Grill
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-7">
-                <div class="left-column">
-                    <div class="left-image" style="background-image: url('/Chicken Bacon R 16262cfb-39e0-40c8-8a88-854fae4afd0b.png');">
-                        <div class="text-content">
-                            <h2>Chicken Bacon Ranch Sandwich</h2>
-                            <p>Served on a fresh brioche bun, this chicken sandwich comes with locally sourced bacon and house ranch. This tasty sandwich is garnished with cilantro and served with fries.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-5">
-                <div class="right-column">
-                    <div class="right-image" style="background-image: url('/Pretty strawber b21af727-4e4a-4aef-bfe6-0e67a8235d93.png');">
-                        <div class="text-content">
-                            <h2>Game Day Margarita</h2>
-                            <p>This drink is a Game Day Grill signature margarita. Here at Game Day we take the simple flavor of a strawberry and enhance it to have a spicy and sweet taste.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        setTimeout(function () {
-            var preloader = document.getElementById("loading");
-            preloader.style.display = "none";
-        }, 2000);
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+            var logo = document.querySelector(".navbar-brand");
+            var navLinks = document.querySelectorAll(".nav-link");
+            logo.classList.toggle("text-white", window.scrollY === 0);
+            navLinks.forEach(function(link) {
+                link.classList.toggle("text-white", window.scrollY === 0);
+            });
+        });
     </script>
 </body>
 </html>

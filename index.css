@@ -1,7 +1,6 @@
 body {
-    background: beige;
+    background: #070707;
     min-height: 200vh;
-    margin: 0;
 }
 
 header {
@@ -40,10 +39,6 @@ header ul {
     align-items: center;
 }
 
-.navbar-toggler-icon {
-    background-color: white;
-}
-
 header ul li {
     position: relative;
     list-style: none;
@@ -59,123 +54,22 @@ header ul li a {
     transition: 0.6s;
 }
 
-.game {
-    font-size: 100px;
-}
-
-.destination {
-    font-size: 50px;
-}
-
 .banner {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url(/studio_photography_of_a_delicious_burger_by_gabimedia_dfyflm8-pre.jpg) center;
+    background: url(/burger+fries.jpg) center top; /* Adjusted background position */
     background-size: cover;
 }
-
 .banner-text {
     font-size: 60px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     color: white;
-    text-align: center;
+    
 }
 
-header.sticky .logo,
+header.sticky .logo
 header.sticky ul li a {
     color: #000;
-}
-
-header.sticky-top {
-    background-color: black;
-}
-
-#loading {
-    background-color: #000;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-}
-
-#loading-center {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 999;
-}
-
-#loading-center-absolute {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    height: 150px;
-    width: 150px;
-    margin-top: -75px;
-    margin-left: -75px;
-    transform: rotate(45deg);
-    z-index: 9999;
-}
-
-.object {
-    width: 20px;
-    height: 20px;
-    background-color: #FFF;
-    position: absolute;
-    left: 65px;
-    top: 65px;
-    border-radius: 50%;
-}
-
-.object:nth-child(2n+0) {
-    margin-right: 0px;
-}
-
-#object_one, #object_two, #object_three, #object_four, #object_five, #object_six, #object_seven, #object_eight, #object_big {
-    animation: spin 2s infinite;
-}
-
-@keyframes spin {
-    50% { transform: scale(0.5); }
-}
-
-#object_big {
-    width: 50px;
-    height: 50px;
-    left: 50px;
-    top: 50px;
-    animation-delay: 0.5s;
-}
-
-.left-column,
-.right-column {
-    display: inline-block;
-    vertical-align: top;
-    width: 48%;
-    margin: 20px 1%;
-}
-
-.left-image,
-.right-image {
-    height: 360px;
-    background-size: cover;
-    position: relative;
-    color: white;
-    text-shadow: 2px 2px 4px black;
-}
-
-.text-content {
-    padding: 20px;
-}
-
-.right-image {
-    text-align: right;
-}
-
-.logo {
-    
 }
